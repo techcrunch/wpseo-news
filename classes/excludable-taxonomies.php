@@ -57,7 +57,7 @@ class WPSEO_News_Excludable_Taxonomies {
 	 * @return bool Whether or not the taxonomy is hidden in the WordPress ui.
 	 */
 	protected function filter_taxonomies( WP_Taxonomy $taxonomy ) {
-		return $taxonomy->show_ui === true;
+		return apply_filters( 'tc_wpseo_news_show_taxonomy', $taxonomy->show_ui === true, $taxonomy );
 	}
 
 	/**
