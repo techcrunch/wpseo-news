@@ -61,7 +61,7 @@ function __wpseo_news_main() {
 	new WPSEO_News();
 }
 // phpcs:enable
-add_action( 'plugins_loaded', '__wpseo_news_main' );
+add_action( 'init', '__wpseo_news_main' );
 
 /**
  * Clear the news sitemap.
